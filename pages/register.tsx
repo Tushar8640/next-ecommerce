@@ -6,12 +6,22 @@ import { FormEvent } from "react";
 export default function Register() {
   async function signInWithEmail(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const { data, error } = await supabase.auth.signUp({
-      email: "imrantushar44@gmail.com",
-      password: "123456",
-    });
-    console.log(data, error?.message);
-    console.log("object");
+    try {
+      const { data } = await supabase.auth.signUp({
+        email: "user31@gmail.com",
+        password: "123456",
+      });
+   
+      if (data.user) {
+        const { data, error } = await supabase
+          .from("users")
+          .insert([{ name: "someValue1", useremail: "user@gmail.com" }])
+          .select();
+        console.log(data, error);
+      }
+    } catch (error:any) {
+      console.log(error.message);
+    }
   }
   return (
     <Layout>
@@ -19,9 +29,7 @@ export default function Register() {
         <div className="container">
           <div className="back-button-section">
             <Link href="/products">
-              <a>
                 <i className="icon-left"></i> Back to store
-              </a>
             </Link>
           </div>
 
@@ -96,7 +104,7 @@ export default function Register() {
 
               <p className="form__signup-link">
                 <Link href="/login">
-                  <a href="#">Are you already a member?</a>
+                  <span>Are you already a member?</span>
                 </Link>
               </p>
             </form>

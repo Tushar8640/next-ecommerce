@@ -24,7 +24,7 @@ const IndexPage = () => {
       reviews(reviewtext)
     `);
 
-      console.log(data);
+  
     }
     fetchProducts();
   }, []);
@@ -43,7 +43,7 @@ const IndexPage = () => {
     `).eq('productid',3).single()
     ;
 
-      console.log(data);
+    
     }
     fetchProducts();
   }, []);

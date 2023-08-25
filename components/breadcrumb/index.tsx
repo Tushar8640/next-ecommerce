@@ -1,16 +1,19 @@
+import Link from "next/link";
+
+
 type BreadcrumbType = {
   title: string;
 };
 
-const Breadcrumb = ({ title }:BreadcrumbType) => {
+const Breadcrumb = ({ title }: BreadcrumbType) => {
   return (
     <section className="breadcrumb">
       <div className="container">
         <ul className="breadcrumb-list">
           <li>
-            <a href="#">
+            <Link href="#">
               <i className="icon-home"></i>
-            </a>
+            </Link>
           </li>
           <li>{title}</li>
         </ul>

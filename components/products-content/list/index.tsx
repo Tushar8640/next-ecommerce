@@ -8,7 +8,6 @@ const ProductsContent = () => {
   const { data, error } = useSwr('/api/products', fetcher);
 
   if (error) return <div>Failed to load users</div>;
-  console.log(data);
   return (
     <>
       {!data && 

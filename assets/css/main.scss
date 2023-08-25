@@ -567,7 +567,7 @@ h5 {
     position: absolute;
     display: none;
     background-color: rgba(255, 255, 255, 0.12);
-   
+
     @include breakpoint(phone) {
       width: 52px;
       height: 52px;
@@ -582,7 +582,7 @@ h5 {
       font-size: 21px;
       display: flex;
     }
-    &::after{
+    &::after {
       content: "";
     }
     &:before {
@@ -1282,6 +1282,7 @@ h5 {
   color: #000;
   margin-bottom: 18px;
   align-items: center;
+
   .checkbox__check {
     display: block;
     width: 100%;
@@ -1290,6 +1291,7 @@ h5 {
     border-top: 1px solid #d4d4d4;
     border-bottom: 1px solid #d4d4d4;
     border-right: 1px solid #d4d4d4;
+    cursor: pointer;
     .checkbox__color {
       position: absolute;
       top: 8px;
@@ -1301,6 +1303,7 @@ h5 {
   &:first-of-type {
     .checkbox__check {
       border-left: 1px solid #d4d4d4;
+      cursor: pointer;
     }
   }
   input {
@@ -1311,6 +1314,7 @@ h5 {
   }
   input:checked + .checkbox__check {
     background-color: #dbdbdb;
+    cursor: pointer;
   }
 }
 
@@ -1537,6 +1541,7 @@ h5 {
     position: relative;
     margin-right: 18px;
     border: 1px solid #d4d4d4;
+    cursor: pointer;
     &:before {
       display: block;
       content: "";
@@ -1566,6 +1571,7 @@ h5 {
     input:checked + .checkbox__check {
       background-color: #000;
       border-color: #000;
+      cursor: pointer;
       &:before {
         opacity: 0;
       }
@@ -1592,6 +1598,7 @@ h5 {
       border-top: 1px solid #d4d4d4;
       border-bottom: 1px solid #d4d4d4;
       border-right: 1px solid #d4d4d4;
+      cursor: pointer;
       .checkbox__color {
         position: absolute;
         top: 8px;
@@ -1603,6 +1610,7 @@ h5 {
     &:first-of-type {
       .checkbox__check {
         border-left: 1px solid #d4d4d4;
+        cursor: pointer;
       }
     }
   }
@@ -1861,6 +1869,7 @@ h5 {
         height: 30px;
         margin-right: 8px;
         border: none;
+        cursor: pointer;
         @include breakpoint(phone) {
           width: 43px;
           height: 43px;
@@ -1868,6 +1877,7 @@ h5 {
         }
         .checkbox__check {
           border: 1px solid #d4d4d4;
+          cursor: pointer;
         }
         .checkbox__color {
           top: 4px;
@@ -2611,6 +2621,7 @@ h5 {
       .checkbox__check {
         height: 20px;
         width: 20px;
+        cursor: pointer;
         &:before {
           top: 2px;
           left: 6px;
@@ -2949,8 +2960,6 @@ h5 {
     }
   }
 }
-
-
 
 /* profile.scss */
 

@@ -58,12 +58,12 @@ const Header = ({ isErrorPage }: HeaderType) => {
     <header className={`site-header ${!onTop ? "site-header--fixed" : ""}`}>
       <div className="container">
         <Link href="/">
-          <a>
+       
             <h1 className="site-logo">
               <Logo />
               E-Shop
             </h1>
-          </a>
+       
         </Link>
         <nav
           ref={navRef}
